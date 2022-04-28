@@ -308,4 +308,11 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  Devise.setup do |config|
+    config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+    require 'devise/orm/active_record'  
+  
+    config.scoped_views = true
+    
+  end
 end
