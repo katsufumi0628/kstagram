@@ -1,25 +1,26 @@
-%h2.big 新規登録
+= image_tag 'Rectangle.png', class: 'top-picture'
+-# %h2.big 新規登録
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = devise_error_messages!
   .field
-    = f.label :メールアドレス
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
-  .field
-    = f.label :ユーザーネーム
+    = f.label :Acccount, class: 'text'
     %br/
     = f.text_field :username, class: "form-control"
   .field
-    = f.label :パスワード
+    = f.label :Email, class: 'text'
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
+  .field
+    = f.label :Password, class: 'text'
     - if @minimum_password_length
       %em
         (#{@minimum_password_length}文字以上)
     %br/
     = f.password_field :password, autocomplete: "off", class: "form-control"
-  .field
-    = f.label :パスワード再入力
+  -# .field
+  -#   = f.label :パスワード再入力
     %br/
     = f.password_field :password_confirmation, autocomplete: "off", class: "form-control"
   .actions
-    = f.submit "登録", class: "btn btn-primary btn-block"
+    = f.submit "Create Account", class: "btn btn-primary btn-block"
 = render "devise/shared/links"
