@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = current_user.profile
+    @username = current_user.username
   end
 
   def edit

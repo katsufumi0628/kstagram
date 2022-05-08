@@ -1,0 +1,26 @@
+
+.profile_username {
+    position: absolute;
+    height: 24px;
+    left: 38.13%;
+    right: 38.4%;
+    top: calc(50% - 24px/2 - 348px);
+
+    font-family: 'Poppins Medium';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #333A42;
+}
+
+.profile_user_image {
+    position: absolute;
+    width: 76.88px;
+    height: 76.88px;
+    left: 148.56px;
+    top: 105.56px;
+
+}
